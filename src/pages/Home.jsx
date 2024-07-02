@@ -39,7 +39,7 @@ export const Home = () => {
                 key={obj._id}
                 id={obj._id}
                 title={obj.title}
-                imageUrl={obj.imageUrl ? `${procces.env.REACT_APP_shell_eco_marathon_site}${obj.imageUrl}` : ''}
+                imageUrl={obj.imageUrl ? `http://localhost:3050${obj.imageUrl}` : ''}
                 user={obj.user}
                 createdAt={obj.createdAt}
                 viewsCount={obj.viewsCount}

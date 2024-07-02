@@ -117,9 +117,9 @@ export const AddPost = () => {
           <Button variant="contained" color="error" onClick={onClickRemoveImage}>
             Удалить
           </Button>
-          <img className={styles.image} src={`${procces.env.REACT_APP_shell_eco_marathon_site}${imageUrl}`} alt="Uploaded" />
+          <img className={styles.image} src={`http://localhost:3050${imageUrl}`} alt="Uploaded" />
         </>
-      )}procces.env.REACT_APP_shell_eco_marathon_site
+      )}
       <br />
       <br />
       <TextField
