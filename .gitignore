@@ -20,4 +20,5 @@
 
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
+yarn-earror.log*
+node_modules.zip
