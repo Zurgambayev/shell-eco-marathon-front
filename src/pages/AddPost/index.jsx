@@ -82,7 +82,7 @@ export const AddPost = () => {
         })
         .catch((err) => {
           console.warn(err);
-          alert( "Ошибка при получении статьи!");
+          alert( "Error receiving article!");
         })
     }
   },[])
@@ -92,7 +92,7 @@ export const AddPost = () => {
       spellChecker: false,
       maxHeight: '400px',
       autofocus: true,
-      placeholder: 'Введите текст...',
+      placeholder: 'Enter text...',
       status: false,
       autosave: {
         enabled: true,
@@ -109,13 +109,13 @@ export const AddPost = () => {
   return (
     <Paper style={{ padding: 30 }}>
       <Button onClick={() => inputFileRef.current.click()} variant="outlined" size="large">
-        Загрузить превью
+         Download preview
       </Button>
       <input ref={inputFileRef} type="file" onChange={handleChangeFile} hidden />
       {imageUrl && (
         <>
           <Button variant="contained" color="error" onClick={onClickRemoveImage}>
-            Удалить
+            Delete
           </Button>
           <img className={styles.image} src={`${process.env.REACT_APP_API_URL}${imageUrl}`} alt="Uploaded" />
         </>
@@ -125,7 +125,7 @@ export const AddPost = () => {
       <TextField
         classes={{ root: styles.title }}
         variant="standard"
-        placeholder="Заголовок статьи..."
+        placeholder="Article title..."
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         fullWidth
@@ -141,7 +141,7 @@ export const AddPost = () => {
       <SimpleMDE className={styles.editor} value={text} onChange={onChange} options={options} />
       <div className={styles.buttons}>
         <Button onClick={onSubmit} size="large" variant="contained">
-          {isEditing?  "coхранить ": "Опублтковать "}
+          {isEditing?  "save ": "Publish "}
         </Button>
         <a href="/">
           <Button size="large">Отмена</Button>
