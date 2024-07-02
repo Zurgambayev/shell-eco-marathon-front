@@ -16,7 +16,7 @@ const AddCommentForm = ({ postId, onAddComment }) => {
       setText('');
     } catch (err) {
       console.warn(err);
-      alert('Ошибка при добавлении комментария');
+      alert('Error adding a comment');
     }
   };
 
@@ -30,7 +30,7 @@ const AddCommentForm = ({ postId, onAddComment }) => {
         <div className={styles.form}>
           <form onSubmit={handleSubmit}>
             <TextField
-              label="Написать комментарий"
+              label="Write a comment"
               variant="outlined"
               maxRows={10}
               multiline
