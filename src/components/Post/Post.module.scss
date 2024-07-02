@@ -35,10 +35,30 @@ $blue: #4361ee;
     min-height: 300px;
     height: 100%;
   }
+
+  @media (max-width: 768px) {
+    height: 200px;
+
+    &Full {
+      min-height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: 150px;
+
+    &Full {
+      min-height: 150px;
+    }
+  }
 }
 
 .wrapper {
   padding: 10px 20px 20px;
+
+  @media (max-width: 480px) {
+    padding: 10px 10px 15px;
+  }
 }
 
 .content {
@@ -47,11 +67,25 @@ $blue: #4361ee;
   p {
     font-size: 22px;
     line-height: 36px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 }
 
 .indention {
   padding-left: 40px;
+
+  @media (max-width: 480px) {
+    padding-left: 20px;
+  }
 }
 
 .title {
@@ -70,6 +104,22 @@ $blue: #4361ee;
   &Full {
     font-size: 42px;
     font-weight: 900;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 32px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
   }
 }
 
@@ -93,6 +143,13 @@ $blue: #4361ee;
       color: #000;
     }
   }
+
+  @media (max-width: 480px) {
+    li {
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .postDetails {
@@ -112,6 +169,17 @@ $blue: #4361ee;
       margin-right: 5px;
     }
   }
+
+  @media (max-width: 480px) {
+    li {
+      font-size: 12px;
+      margin-right: 10px;
+
+      svg {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 .skeleton {
@@ -127,6 +195,10 @@ $blue: #4361ee;
 
   &Info {
     margin-left: 50px;
+
+    @media (max-width: 480px) {
+      margin-left: 20px;
+    }
   }
 }
 
@@ -137,6 +209,10 @@ $blue: #4361ee;
     display: flex;
     flex-direction: column;
   }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 
 .skeletonTags {
@@ -144,6 +220,10 @@ $blue: #4361ee;
 
   span {
     margin-right: 15px;
+
+    @media (max-width: 480px) {
+      margin-right: 10px;
+    }
   }
 }
 
@@ -155,4 +235,9 @@ $blue: #4361ee;
   border-radius: 10px;
   opacity: 0;
   transition: all 0.15s ease-in-out;
+
+  @media (max-width: 480px) {
+    right: 10px;
+    top: 10px;
+  }
 }

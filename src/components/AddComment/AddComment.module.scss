@@ -4,10 +4,32 @@
   padding-bottom: 20px;
   margin-right: 20px;
   margin-left: 17px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 5px;
+    padding-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
 }
 
 .avatar {
   margin-right: 15px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 8px;
+  }
 }
 
 .form {
@@ -15,5 +37,9 @@
 
   button {
     margin-top: 10px;
+
+    @media (max-width: 480px) {
+      margin-top: 8px;
+    }
   }
 }
